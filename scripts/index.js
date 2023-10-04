@@ -1,16 +1,19 @@
 $(document).ready(function () {
 	$('.modal-trigger').on('click', function () {
 		$(this).closest('.card').find('.modal').fadeIn();
+		$('body').addClass('.no-overflow');
 	});
 
 	$('.modal').on('click', function (event) {
 		if ($(event.target).hasClass('modal')) {
 			$(this).closest('.card').find('.modal').fadeOut();
+			$('body').removeClass('.no-overflow');
 		}
 	});
 
 	$('.closeImg').on('click', function () {
 		$(this).closest('.card').find('.modal').fadeOut();
+		$('body').removeClass('.no-overflow');
 	});
 
 	$('.cases .carousel-projects').owlCarousel({
@@ -32,9 +35,11 @@ $(document).ready(function () {
 			},
 			1024: {
 				items: 1,
+				nav: false,
 			},
 			1950: {
 				items: 1,
+				nav: false,
 			},
 		},
 	});
