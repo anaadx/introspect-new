@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap');
+
+:root {
+	--font-sans: 'Inter', sans-serif;
+
+	--color-primary: rgb(30 64 175);
+	--color-secondary: rgb(30 58 138);
+	--color-accent: rgb(109 40 217);
+
+	--color-text-heading: rgb(0 0 0);
+	--color-text-default: rgb(16 16 16);
+	--color-text-muted: rgb(16 16 16 / 66%);
+	--color-bg-page: rgb(255 255 255);
+
+	--color-bg-page-dark: rgb(3 6 32);
+
+	--transition-fast: all 500ms;
+	--transition-medium: all 1s;
+	--transition-long: all 1.5s;
+
+	--font1: 55px;
+	--font2: 48px;
+	--font3: 36px;
+	--font4: 32px;
+	--font5: 30px;
+	--font6: 24px;
+	--font7: 20px;
+	--font8: 18px;
+	--font9: 16px;
+	--font10: 12px;
+}
+
+.dark {
+	--font-sans: 'Inter Variable';
+	--font-serif: var(--font-sans);
+	--font-heading: var(--font-sans);
+
+	--color-primary: rgb(30 64 175);
+	--color-secondary: rgb(30 58 138);
+	--color-accent: rgb(109 40 217);
+
+	--color-text-heading: rgb(0 0 0);
+	--color-text-default: rgb(229 236 246);
+	--color-text-muted: rgb(229 236 246 / 66%);
+	--color-bg-page: var(--color-bg-page-dark);
+}
+
+* {
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+}
+
+body {
+	width: 100%;
+}
+
+.section-title {
+	margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+
+	:root {
+		--font1: calc(60px * 0.60);
+		--font2: calc(48px * 0.80);
+		--font3: calc(36px * 0.85);
+		--font4: calc(32px * 0.85);
+		--font5: calc(30px * 0.85);
+		--font6: calc(24px * 0.85);
+		--font7: calc(20px * 0.85);
+		--font8: calc(18px * 0.85);
+		--font9: calc(16px * 0.85);
+		--font10: calc(12px * 0.85);
+	}
+
+	.section-title {
+		margin-bottom: 10px;
+	}
+}
